@@ -22,4 +22,4 @@ The list of features created for a Customer of the store:
   4. Send the order and add your personal info to the order;
   5. Generate a text report regarding the sent order.
 
-! This project has a didactic character, made for the Faculty of Cybernetics, Statistics and Economic Informatics, ASE, Bucharest.
+** This project has a didactic character, made for the Faculty of Cybernetics, Statistics and Economic Informatics, ASE, Bucharest. Also, the naming of the objectes and variables is made in Romanian, so translating them might be necessary for speakers of other foreign languages.
