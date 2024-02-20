@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<vector>
 #include<string>
 #include<windows.h>
@@ -1221,40 +1221,7 @@ class Meniu
 		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		SetConsoleScreenBufferSize(hConsole, { 100, 300 });
-		int varianta;
-		cout << "1. Testare Supraincarcare de Operatori" << endl;
-		cout << "2. Accesare Meniu Functionalitati" << endl << endl;
-		cout << "OBS 1: Odata ce alegem o optiune nu putem reveni la alta, nu am mai implementat acest lucru, deci rulati aplicatia de 2 ori, pentru verificarea ambelor optiuni !" << endl;
-		cout << "OBS 2: Date Conectare Client: user1, parola1 sau user2, parola2" << endl;
-		cout << "OBS 3: Date Conectare Magazin ( Administrator ): magazin1, parola1 sau magazin2, parola2" << endl;
-		cout << endl << "Alegeti o varianta: " << endl;
-		cin >> varianta;
-		if (varianta == 1)
-		{
-			curataConsola();
-			ProduseElectronice produsElectronic("Lenovo", "Destinat gamerilor", "15 ianuarie", 2500, 20, "10 ani", "Electronice");
-			cout << endl << "Testare supraincarcare operator +=";
-			produsElectronic += 100;
-			cout << endl << "Pret in urma sumei: ";
-			cout << produsElectronic.getPretProdus();
-			cout << endl << endl << "Testare supraincarcare operator <";
-			ProduseMobilier produsMobilier("Scaun gaming", "Destinat gamerilor", "20 ianuarie 2014", 800, 12, "Plastic", "Mobilier");
-			cout << endl << "Cantitatea disponibila mai mica este: ";
-			if (produsElectronic < produsMobilier)
-				cout << produsElectronic.getCantitateDisponibila();
-			else
-				cout << produsMobilier.getCantitateDisponibila();
-			cout << endl << endl << "Testare supraincarcare operator -";
-			ProduseElectronice produsElectronic2("Samsung", "Telefon cu touchscreen", "12 martie 2022", 1500, 10, "5 ani", "Electronice");
-			cout << endl << "Pret in urma diferentei: ";
-			produsElectronic2 - 1000;
-			cout << produsElectronic2.getPretProdus();
-		}
-		else
-		{
-			curataConsola();
-			Magazin magazin;
-			Meniu meniuUtilizare(&magazin);
-			meniuUtilizare.afisareMeniu();
-		}
+		Magazin magazin;
+		Meniu meniuUtilizare(&magazin);
+		meniuUtilizare.afisareMeniu();
 	}
